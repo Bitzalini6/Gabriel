@@ -35,6 +35,8 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblConnection = new System.Windows.Forms.Label();
             this.dGridView = new System.Windows.Forms.DataGridView();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(167, 181);
+            this.btnSubmit.Location = new System.Drawing.Point(30, 171);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 4;
@@ -94,18 +96,42 @@
             // dGridView
             // 
             this.dGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGridView.Location = new System.Drawing.Point(392, 3);
+            this.dGridView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dGridView.Location = new System.Drawing.Point(392, 57);
             this.dGridView.Name = "dGridView";
             this.dGridView.RowHeadersWidth = 51;
             this.dGridView.RowTemplate.Height = 24;
             this.dGridView.Size = new System.Drawing.Size(704, 418);
             this.dGridView.TabIndex = 6;
+            this.dGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridView_CellClick);
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(274, 171);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 7;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // Update
+            // 
+            this.Update.Location = new System.Drawing.Point(144, 171);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(75, 23);
+            this.Update.TabIndex = 10;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 450);
+            this.ClientSize = new System.Drawing.Size(1190, 754);
+            this.Controls.Add(this.Update);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.dGridView);
             this.Controls.Add(this.lblConnection);
             this.Controls.Add(this.btnSubmit);
@@ -131,6 +157,8 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblConnection;
         private System.Windows.Forms.DataGridView dGridView;
+        private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Button Update;
     }
 }
 
